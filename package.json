@@ -1,0 +1,28 @@
+{
+  "name": "ts-demos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node ./src/crowller.ts",
+    "dev:build": "tsc -w",
+    "dev:start": "nodemon node ./build/crowller.js",
+    "div": "concurrently npm:dev:*"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "data/*"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/superagent": "^4.1.15",
+    "cheerio": "^1.0.0-rc.12",
+    "concurrently": "^7.3.0",
+    "nodemon": "^2.0.19",
+    "superagent": "^8.0.0",
+    "ts-node": "^10.9.1"
+  }
+}
