@@ -1,6 +1,9 @@
 import express, {NextFunction, Request, Response} from 'express';
 import bodyParser from 'body-parser';
 import cookieSession from 'cookie-session';
+import './controller/LoginController';
+import './controller/CrowllerController'
+// import router from './router';
 import router from './router';
 
 
@@ -13,10 +16,10 @@ app.use(
         maxAge: 24 * 60 * 60 * 1000
     })
 );
-app.use((req: Request, res: Response, next: NextFunction) => {
-    req.teacherName = 'dell';
-    next();
-})
+// app.use((req: Request, res: Response, next: NextFunction) => {
+//     req.teacherName = 'dell';
+//     next();
+// })
 app.use(router);
 
 app.listen(7001, ()=> {

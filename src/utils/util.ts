@@ -1,5 +1,3 @@
-import { data } from "cheerio/lib/api/attributes";
-
 interface Result {
     success: boolean;
     errMsg?: string;
